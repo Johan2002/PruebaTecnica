@@ -1,0 +1,20 @@
+.form-container {
+    width: 50%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-row {
+    width: 50%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+}

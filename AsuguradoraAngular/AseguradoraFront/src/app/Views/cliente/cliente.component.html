@@ -1,0 +1,74 @@
+<div class="mat-elevation-z6 form-container">
+
+    <h1 style="text-align: center;">FORMULARIO DE CLIENTES</h1>
+    <form [formGroup]="formCliente">
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Documento Identidad</mat-label>
+                <input matInput formControlName="DocumentoIdentidad" [readonly]="modoEdicion">
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Primer Nombre</mat-label>
+                <input matInput formControlName="PrimerNombre">
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Segundo Nombre</mat-label>
+                <input matInput formControlName="SegundoNombre">
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Primer Apellido</mat-label>
+                <input matInput formControlName="PrimerApellido">
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Segundo Apellido</mat-label>
+                <input matInput formControlName="SegundoApellido">
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Teléfono</mat-label>
+                <input matInput formControlName="Telefono">
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="Email">
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Fecha Nacimiento</mat-label>
+                <input matInput formControlName="FechaNacimiento" [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Valor Seguro</mat-label>
+                <input matInput type="number" formControlName="ValorSeguro">
+                <span matPrefix>$&nbsp;</span>
+            </mat-form-field>
+        </div>
+        <div class="form-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Observaciones</mat-label>
+                <textarea matInput formControlName="Observaciones"></textarea>
+            </mat-form-field>
+        </div>
+
+        <div class="form-actions">
+            <button mat-flat-button color="primary" (click)="guardar()">Guardar</button>
+            <button mat-flat-button color="warn" (click)="volver()" style="margin-left: 8px;">Volver</button>
+        </div>
+    </form>
+</div>
